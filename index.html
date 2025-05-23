@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monthly Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Monthly Expense Tracker</h1>
+
+    <div class="input-group">
+      <label for="income">Monthly Income ($)</label>
+      <input type="number" id="income" placeholder="Enter monthly income" />
+      <button onclick="saveIncome()">Save Income</button>
+    </div>
+
+    <div class="input-group">
+      <label>New Expense</label>
+      <input type="number" id="expenseAmount" placeholder="Expense amount" />
+      <input type="text" id="expenseCategory" placeholder="Category (e.g., food, rent)" />
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <div class="summary">
+      <p><strong>Total Income:</strong> $<span id="totalIncome">0</span></p>
+      <p><strong>Total Expenses:</strong> $<span id="totalExpenses">0</span></p>
+      <p><strong>Savings:</strong> $<span id="savings">0</span></p>
+    </div>
+
+    <canvas id="expenseChart" width="200" height="200"></canvas>
+
+    <ul id="expenseList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
